@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Lucky Dice Casino</title>
+</head>
+
+<body>
+    <!-- header background img cover -->
+    <div class="container-fluid header-cover">
+        <div class="header-text">LUCKY DICE CASINO</div>
+    </div>
+
+    <!-- contain body -->
+    <div class="container">
+        <div class="row">
+
+            <!-- User info -->
+            <div class="col-sm-5">
+                <div class="row form-group">
+                    <div class="col-sm-12">
+                        <h3 class="heading-title my-4 font-weight-bold font-italic">Your Infomation</h3>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-3">
+                        <label class="col-form-label font-weight-bold">Username</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input id="inp-user-name" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-3">
+                        <label class="col-form-label font-weight-bold">Firstname</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input id="inp-first-name" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-3">
+                        <label class="col-form-label font-weight-bold">Lastname</label>
+                    </div>
+                    <div class="col-sm-9 ">
+                        <input id="inp-last-name" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Throw Dice -->
+            <div class="col-sm-4 text-center">
+                <div class="row form-group">
+                    <div class="col-sm-12">
+                        <button id="btn-dice" class="btn-throw-dice">Row Dice</button>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-12">
+                        <img src="LuckyDiceImages/dice.png" alt="dice-photo" id="img-dice" class="img-thumbnail">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-12">
+                        <p id="p-notifi-dice">Welcome</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voucher and Present -->
+            <div class="col-sm-3 text-center mt-4">
+                <div class="row form-group">
+                    <div class="col-sm-12">
+                        <h5 class="heading-voucher-title">Voucher</h5>
+                        <p id="p-voucherID">No ID</p>
+                        <p id="p-voucher-percent">0%</p>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-sm-12 present">
+                        <p id="p-congrat" style="display: none;"></p>
+                        <img id="img-present" class="img-thumbnail" src="LuckyDiceImages/no-present.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons Get Data -->
+        <div class="row form-group text-center">
+            <div class="col-sm-12 ">
+                <input id="btn-dice-history" class="btn btn-success button-width w-25" value="Dice History"
+                    type="button">
+                <input id="btn-voucher-history" class="btn btn-primary button-width w-25" value="Voucher History"
+                    type="button">
+                <input id="btn-present-history" class="btn btn-primary button-width w-25" value="Present History"
+                    type="button">
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="row ">
+            <div class="col-sm-12 ">
+                <table id="hisory-placeholder-table" class="table table-light table-striped table-hover border">
+                    <tr class="thead-dark">
+                        <th class="text-white">Lượt</th>
+                        <th class="text-white">Dice</th>
+                    </tr>
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4</td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

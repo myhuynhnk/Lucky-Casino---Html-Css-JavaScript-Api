@@ -1,0 +1,147 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #bdbdbe;
+}
+
+.header-cover {
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+
+.header-cover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(#00ccff, #cdffff, #d400d4, #25039e, #c22339);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;  
+}
+
+.header-cover::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 18px;
+    background-image: url("LuckyDiceImages/cover.jpg");
+}
+
+.header-text {
+    text-align: center;
+    font-size: 55px;
+    font-weight: 900;
+    font-style: italic;
+    /* background-image: linear-gradient(to left top,#9f1013, #1d800d, #c22339, #fac031); */
+    background-image: linear-gradient(90deg, #9f1013, #1d800d, #c22339, #fac031);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: textAnimate 6s linear infinite;
+    margin-top: 1.2rem;
+    z-index: 1;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes textAnimate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+
+.btn-throw-dice {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 20px 0;
+    color: #fff;
+    background-color: #f4d35e;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514e;
+    outline: none;
+    transition: 0.3s;
+}
+
+.btn-throw-dice:hover, .btn-throw-dice:active {
+    outline: none;
+    background-color: #50514f;
+    cursor: pointer;
+    transform: translateY(10px);
+}
+
+#p-notifi-dice {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    background-image: linear-gradient(to top right, #9f1013, #1d800d, #c22339, #fac031);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: textAnimate 2s linear infinite;
+}
+
+.heading-voucher-title {
+    font-size: 30px;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #1d800d, #c22339,#ffc107, #25039e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.para-congrat-prize {
+    font-size: 25px;
+    font-weight: 600;
+    background-image: linear-gradient(to top right, #9f1013, #1d800d, #c22339, #fac031);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: textAnimate 2s linear infinite;
+}
+
+
+@media (max-width: 576px) {
+    .header-text {
+        font-size: 32px;
+        margin-top: 2rem;
+    }
+
+    /* .heading-voucher-title {
+
+    } */
+    
+    #btn-dice-history,
+    #btn-voucher-history,
+    #btn-present-history {
+        font-size: 10px;
+    }
+}
+
+
